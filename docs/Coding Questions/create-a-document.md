@@ -2,56 +2,30 @@
 sidebar_position: 2
 ---
 
-# Create a Document
+# Service-Based Companies
 
-Documents are **groups of pages** connected through:
+Service-based companies focus more on **problem-solving basics**, **communication**, and **project understanding**.
 
-- a **sidebar**
-- **previous/next navigation**
-- **versioning**
+## Interview Structure
 
-## Create your first Doc
+Typical rounds:
+1. Aptitude / Online Test
+2. Coding Round (Basic–Intermediate)
+3. Technical Interview
+4. Managerial / HR
 
-Create a Markdown file at `docs/hello.md`:
+## Coding Expectations
 
-```md title="docs/hello.md"
-# Hello
+- Arrays, Strings, Loops
+- Basic Recursion
+- Simple SQL queries
+- Language fundamentals (Java / Python / C++)
 
-This is my **first Docusaurus document**!
-```
+## Preparation Strategy
 
-A new document is now available at [http://localhost:3000/docs/hello](http://localhost:3000/docs/hello).
+- Master one language
+- Practice basic DSA
+- Be strong in explaining your approach
+- Prepare project explanations thoroughly
 
-## Configure the Sidebar
-
-Docusaurus automatically **creates a sidebar** from the `docs` folder.
-
-Add metadata to customize the sidebar label and position:
-
-```md title="docs/hello.md" {1-4}
----
-sidebar_label: 'Hi!'
-sidebar_position: 3
----
-
-# Hello
-
-This is my **first Docusaurus document**!
-```
-
-It is also possible to create your sidebar explicitly in `sidebars.js`:
-
-```js title="sidebars.js"
-export default {
-  tutorialSidebar: [
-    'intro',
-    // highlight-next-line
-    'hello',
-    {
-      type: 'category',
-      label: 'Tutorial',
-      items: ['tutorial-basics/create-a-document'],
-    },
-  ],
-};
-```
+➡️ Move to **Coding Round** to see exact question types.
