@@ -1,8 +1,8 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 ---
 
-# Service-Based Companies
+# Interview Process
 
 Service-based companies focus more on **problem-solving basics**, **communication**, and **project understanding**.
 

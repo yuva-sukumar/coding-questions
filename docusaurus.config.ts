@@ -75,7 +75,7 @@ const config: Config = {
           items: [
             {
               label: "Yuva Builds",
-              to: "/intro",
+              to: "/coding-questions/docs/intro",
             },
           ],
         },
@@ -83,26 +83,22 @@ const config: Config = {
           title: "Community",
           items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
+              label: "LinkedIn",
+              href: "https://www.linkedin.com/in/yuvarakshana-sukumar-4193b7206/",
             },
-            {
-              label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
-            }
           ],
         },
         {
           title: "More",
           items: [
             {
-              label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
+              label: "Youtube",
+              href: "https://www.youtube.com/@yuva_views06",
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Yuva Builds, Inc. Built with Passion.`,
     },
     prism: {
       theme: prismThemes.github,

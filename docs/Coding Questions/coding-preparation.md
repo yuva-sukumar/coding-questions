@@ -8,7 +8,7 @@ This documentation is a **structured roadmap** for preparing coding interviews a
 
 - 🏢 **Service-based companies**
 - 🧑‍💻 **Tier 1 & Tier 2 Product companies**
-- 🚀 **FAANG / MAANG companies**
+- 🚀 **MAANG companies**
 
 Each section covers:
 - Interview format

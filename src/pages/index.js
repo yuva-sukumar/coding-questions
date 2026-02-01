@@ -11,9 +11,7 @@ export default function Home() {
     >
       <main className={styles.container}>
         <h1>🚀 Kickstart Your Career</h1>
-        <p>
-          By Yuva
-        </p>
+        <p>By Yuva</p>
 
         <div className={styles.grid}>
           <Link className={styles.card} to="/docs/intro">
@@ -21,22 +19,24 @@ export default function Home() {
             <span>Overview and preparation roadmap</span>
           </Link>
 
-          <Link className={styles.card} to="/docs/service-companies/overview">
+          <Link
+            className={styles.card}
+            to="/docs/Coding Questions/Service Companies/interview-process"
+          >
             🏢 Service Companies
             <span>Common coding questions & topics</span>
           </Link>
 
-          <Link
-            className={styles.card}
-            to="/docs/product-companies/tier1/overview"
-          >
+          <Link className={styles.card} to="">
             🧑‍💻 Product Companies
             <span>Tier 1 & Tier 2 coding preparation</span>
+            <span>Comming Soon...Stay Tuned</span>
           </Link>
 
-          <Link className={styles.card} to="/docs/faang-maang/overview">
+          <Link className={styles.card} to="">
             🚀 FAANG / MAANG
             <span>DSA patterns & system design</span>
+            <span>Comming Soon...Stay Tuned</span>
           </Link>
         </div>
       </main>
