@@ -1,0 +1,63 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/coding-questions/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/coding-questions/docs",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "Coding Questions/coding-preparation",
+              "path": "/coding-questions/docs/Coding Questions/coding-preparation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Coding Questions/Service Companies/coding-questions",
+              "path": "/coding-questions/docs/Coding Questions/Service Companies/coding-questions",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Coding Questions/Service Companies/DSA-question",
+              "path": "/coding-questions/docs/Coding Questions/Service Companies/DSA-question",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Coding Questions/Service Companies/interview-process",
+              "path": "/coding-questions/docs/Coding Questions/Service Companies/interview-process",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Coding Questions/Service Companies/System-design",
+              "path": "/coding-questions/docs/Coding Questions/Service Companies/System-design",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/coding-questions/docs/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/coding-questions",
+              "path": "/coding-questions/docs/category/coding-questions",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/coding-questions/docs/intro",
+                "label": "intro"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

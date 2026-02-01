@@ -1,0 +1,27 @@
+{
+  "id": "Coding Questions/Service Companies/DSA-question",
+  "title": "Data Structures & Algorithms Questions",
+  "description": "Focus on problem-solving, array/string manipulation, sorting/searching patterns, and DSA concepts.",
+  "source": "@site/docs/Coding Questions/Service Companies/DSA-question.md",
+  "sourceDirName": "Coding Questions/Service Companies",
+  "slug": "/Coding Questions/Service Companies/DSA-question",
+  "permalink": "/coding-questions/docs/Coding Questions/Service Companies/DSA-question",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_label": "DSA Questions",
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "General Questions",
+    "permalink": "/coding-questions/docs/Coding Questions/Service Companies/coding-questions"
+  },
+  "next": {
+    "title": "System Design",
+    "permalink": "/coding-questions/docs/Coding Questions/Service Companies/System-design"
+  }
+}

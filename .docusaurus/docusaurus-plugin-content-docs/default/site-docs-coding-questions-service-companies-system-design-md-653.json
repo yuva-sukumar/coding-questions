@@ -1,0 +1,23 @@
+{
+  "id": "Coding Questions/Service Companies/System-design",
+  "title": "System Design for Service-Based Companies",
+  "description": "Mostly for experienced hires (1–3 years+). Focus on scalable architecture and practical solutions.",
+  "source": "@site/docs/Coding Questions/Service Companies/System-design.md",
+  "sourceDirName": "Coding Questions/Service Companies",
+  "slug": "/Coding Questions/Service Companies/System-design",
+  "permalink": "/coding-questions/docs/Coding Questions/Service Companies/System-design",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_label": "System Design",
+    "sidebar_position": 4
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "DSA Questions",
+    "permalink": "/coding-questions/docs/Coding Questions/Service Companies/DSA-question"
+  }
+}

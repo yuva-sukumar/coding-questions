@@ -1,0 +1,27 @@
+{
+  "id": "Coding Questions/Service Companies/coding-questions",
+  "title": "General / Logical Questions",
+  "description": "Focus on basics, logic, and explanation. Perfect for fresher rounds.",
+  "source": "@site/docs/Coding Questions/Service Companies/coding-questions.md",
+  "sourceDirName": "Coding Questions/Service Companies",
+  "slug": "/Coding Questions/Service Companies/coding-questions",
+  "permalink": "/coding-questions/docs/Coding Questions/Service Companies/coding-questions",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_label": "General Questions",
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Interview Process",
+    "permalink": "/coding-questions/docs/Coding Questions/Service Companies/interview-process"
+  },
+  "next": {
+    "title": "DSA Questions",
+    "permalink": "/coding-questions/docs/Coding Questions/Service Companies/DSA-question"
+  }
+}
