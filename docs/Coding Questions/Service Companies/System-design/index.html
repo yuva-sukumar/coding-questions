@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-Coding Questions/Service Companies/System-design" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">System Design for Service-Based Companies | My Site</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://yuva-sukumar.github.io/coding-questions/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://yuva-sukumar.github.io/coding-questions/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://yuva-sukumar.github.io/coding-questions/docs/Coding Questions/Service Companies/System-design"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="System Design for Service-Based Companies | My Site"><meta data-rh="true" name="description" content="Mostly for experienced hires (1–3 years+). Focus on scalable architecture and practical solutions."><meta data-rh="true" property="og:description" content="Mostly for experienced hires (1–3 years+). Focus on scalable architecture and practical solutions."><link data-rh="true" rel="icon" href="/coding-questions/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://yuva-sukumar.github.io/coding-questions/docs/Coding Questions/Service Companies/System-design"><link data-rh="true" rel="alternate" href="https://yuva-sukumar.github.io/coding-questions/docs/Coding Questions/Service Companies/System-design" hreflang="en"><link data-rh="true" rel="alternate" href="https://yuva-sukumar.github.io/coding-questions/docs/Coding Questions/Service Companies/System-design" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Coding Questions","item":"https://yuva-sukumar.github.io/coding-questions/docs/category/coding-questions"},{"@type":"ListItem","position":2,"name":"System Design","item":"https://yuva-sukumar.github.io/coding-questions/docs/Coding Questions/Service Companies/System-design"}]}</script><link rel="stylesheet" href="/coding-questions/assets/css/styles.43c6a7a6.css">
+<script src="/coding-questions/assets/js/runtime~main.9a709068.js" defer="defer"></script>
+<script src="/coding-questions/assets/js/main.8ef05fdf.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/coding-questions/"></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/coding-questions/docs/intro">Yuva Builds</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/coding-questions/docs/intro"><span title="About Me" class="linkLabel_WmDU">About Me</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" href="/coding-questions/docs/category/coding-questions"><span title="Coding Questions" class="categoryLinkLabel_W154">Coding Questions</span></a><button aria-label="Collapse sidebar category &#x27;Coding Questions&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/coding-questions/docs/Coding Questions/coding-preparation"><span title="Coding Interview Preparation Guide" class="linkLabel_WmDU">Coding Interview Preparation Guide</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" tabindex="0" href="/coding-questions/docs/Coding Questions/Service Companies/interview-process"><span title="Service Companies" class="categoryLinkLabel_W154">Service Companies</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/coding-questions/docs/Coding Questions/Service Companies/interview-process"><span title="Interview Process" class="linkLabel_WmDU">Interview Process</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/coding-questions/docs/Coding Questions/Service Companies/coding-questions"><span title="General Questions" class="linkLabel_WmDU">General Questions</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/coding-questions/docs/Coding Questions/Service Companies/DSA-question"><span title="DSA Questions" class="linkLabel_WmDU">DSA Questions</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/coding-questions/docs/Coding Questions/Service Companies/System-design"><span title="System Design" class="linkLabel_WmDU">System Design</span></a></li></ul></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/coding-questions/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/coding-questions/docs/category/coding-questions"><span>Coding Questions</span></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Service Companies</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">System Design</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>System Design for Service-Based Companies</h1></header>
+<blockquote>
+<p>Mostly for experienced hires (1–3 years+). Focus on <strong>scalable architecture</strong> and <strong>practical solutions</strong>.</p>
+</blockquote>
+<h1>System Design Key Terms &amp; Concepts</h1>
+<blockquote>
+<p>Ready-to-read glossary for <strong>service-based system design interviews</strong>.<br>
+<!-- -->Use this to quickly revise <strong>basic terms and concepts</strong> before your interview.</p>
+</blockquote>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-key-terms">🔑 Key Terms<a href="#-key-terms" class="hash-link" aria-label="Direct link to 🔑 Key Terms" title="Direct link to 🔑 Key Terms" translate="no">​</a></h2>
+<table><thead><tr><th>Term</th><th>Simple Explanation</th></tr></thead><tbody><tr><td><strong>Downtime</strong></td><td>Time when the system is unavailable. Keep downtime minimal.</td></tr><tr><td><strong>Uptime / Availability</strong></td><td>Percentage of time the system is operational (e.g., 99.9% uptime).</td></tr><tr><td><strong>Reliability</strong></td><td>How consistently a system performs without errors.</td></tr><tr><td><strong>Scalability</strong></td><td>Ability to handle more users or requests by adding resources.</td></tr><tr><td><strong>Vertical Scaling</strong></td><td>Adding more power to a single server (CPU, RAM).</td></tr><tr><td><strong>Horizontal Scaling</strong></td><td>Adding more servers to share the load.</td></tr><tr><td><strong>Latency</strong></td><td>Time it takes for the system to respond to a request.</td></tr><tr><td><strong>Throughput</strong></td><td>Number of requests handled per second by the system.</td></tr><tr><td><strong>Load Balancer</strong></td><td>Distributes incoming requests to multiple servers evenly.</td></tr><tr><td><strong>Caching</strong></td><td>Storing frequently used data in memory for faster access.</td></tr><tr><td><strong>Replication</strong></td><td>Making copies of data on multiple servers for reliability.</td></tr><tr><td><strong>Sharding</strong></td><td>Splitting a large database into smaller parts for better performance.</td></tr><tr><td><strong>Fault Tolerance</strong></td><td>System keeps working even if some components fail.</td></tr><tr><td><strong>Microservices</strong></td><td>Breaking system into small independent services for each function.</td></tr><tr><td><strong>Database Index</strong></td><td>Helps find data faster, like an index in a book.</td></tr><tr><td><strong>API</strong></td><td>Interface for clients to interact with a server (GET, POST, PUT, DELETE).</td></tr><tr><td><strong>CRUD Operations</strong></td><td>Basic database operations: Create, Read, Update, Delete.</td></tr><tr><td><strong>Concurrency</strong></td><td>Handling multiple tasks or users at the same time.</td></tr><tr><td><strong>Queue</strong></td><td>Data structure to manage requests in order (FIFO).</td></tr><tr><td><strong>CDN (Content Delivery Network)</strong></td><td>Network of servers that deliver content faster by location.</td></tr><tr><td><strong>Load Shedding</strong></td><td>Dropping some requests when system is overloaded to stay functional.</td></tr><tr><td><strong>Consistency</strong></td><td>Data is the same across all parts of the system at any time.</td></tr><tr><td><strong>Partition Tolerance</strong></td><td>System continues to operate even if some servers can’t communicate.</td></tr><tr><td><strong>CAP Theorem</strong></td><td>A system can have only <strong>2 of 3</strong>: Consistency, Availability, Partition tolerance.</td></tr><tr><td><strong>Replication Lag</strong></td><td>Delay between updating main DB and replicas.</td></tr><tr><td><strong>Queue vs Stack</strong></td><td>Queue = FIFO (First In First Out), Stack = LIFO (Last In First Out).</td></tr></tbody></table>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-topics-to-cover">📚 Topics to Cover<a href="#-topics-to-cover" class="hash-link" aria-label="Direct link to 📚 Topics to Cover" title="Direct link to 📚 Topics to Cover" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-database-basics">1. Database Basics<a href="#1-database-basics" class="hash-link" aria-label="Direct link to 1. Database Basics" title="Direct link to 1. Database Basics" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Tables &amp; Relations</strong> – Store data in rows and columns.</li>
+<li class=""><strong>Primary / Foreign Keys</strong> – Unique identifiers and references between tables.</li>
+<li class=""><strong>Indexing</strong> – Speed up searches.</li>
+<li class=""><strong>ACID Properties</strong> – Ensure data is consistent and reliable.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-api--endpoints">2. API &amp; Endpoints<a href="#2-api--endpoints" class="hash-link" aria-label="Direct link to 2. API &amp; Endpoints" title="Direct link to 2. API &amp; Endpoints" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>REST API</strong> – Standard way for systems to communicate.</li>
+<li class=""><strong>HTTP Methods</strong> – GET (read), POST (create), PUT (update), DELETE (remove).</li>
+<li class=""><strong>Request/Response Format</strong> – Usually JSON.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-caching">3. Caching<a href="#3-caching" class="hash-link" aria-label="Direct link to 3. Caching" title="Direct link to 3. Caching" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Why</strong> – Reduce latency, increase performance.</li>
+<li class=""><strong>Where</strong> – Memory (Redis / Memcached), client-side cache.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-load-balancing">4. Load Balancing<a href="#4-load-balancing" class="hash-link" aria-label="Direct link to 4. Load Balancing" title="Direct link to 4. Load Balancing" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose</strong> – Distribute traffic evenly across servers.</li>
+<li class=""><strong>Types</strong> – Round-robin, least connections, IP hash.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-high-level-architecture">5. High-Level Architecture<a href="#5-high-level-architecture" class="hash-link" aria-label="Direct link to 5. High-Level Architecture" title="Direct link to 5. High-Level Architecture" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Flow</strong> – User → API → Server → Database → Response.</li>
+<li class=""><strong>Diagram</strong> – Show components &amp; connections; no need for deep details.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="6-reliability--availability">6. Reliability &amp; Availability<a href="#6-reliability--availability" class="hash-link" aria-label="Direct link to 6. Reliability &amp; Availability" title="Direct link to 6. Reliability &amp; Availability" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Replication</strong> – Keep copies of data on multiple servers.</li>
+<li class=""><strong>Backups</strong> – Periodically save data for recovery.</li>
+<li class=""><strong>Failover</strong> – Automatically switch to a backup server if main fails.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="7-scalability--performance">7. Scalability &amp; Performance<a href="#7-scalability--performance" class="hash-link" aria-label="Direct link to 7. Scalability &amp; Performance" title="Direct link to 7. Scalability &amp; Performance" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Vertical vs Horizontal Scaling</strong> – Add power vs add servers.</li>
+<li class=""><strong>Partitioning / Sharding</strong> – Divide data for faster access.</li>
+<li class=""><strong>Caching &amp; CDN</strong> – Reduce latency and load.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="8-concurrency--queues">8. Concurrency &amp; Queues<a href="#8-concurrency--queues" class="hash-link" aria-label="Direct link to 8. Concurrency &amp; Queues" title="Direct link to 8. Concurrency &amp; Queues" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Concurrent Users</strong> – Multiple users using the system simultaneously.</li>
+<li class=""><strong>Queue</strong> – Helps process requests in order (e.g., ticketing, notifications).</li>
+</ul>
+<hr>
+<h1>Service-Based System Design Examples</h1>
+<blockquote>
+<p>Practical examples of <strong>high-level system design</strong> questions for service-based company interviews.<br>
+<!-- -->Focus on simple diagrams, component flow, and explanation of each part.</p>
+</blockquote>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="1️⃣-library-management-system">1️⃣ Library Management System<a href="#1️⃣-library-management-system" class="hash-link" aria-label="Direct link to 1️⃣ Library Management System" title="Direct link to 1️⃣ Library Management System" translate="no">​</a></h2>
+<p><strong>Scenario:</strong> A system to manage books, users, and borrowing/returning books.</p>
+<p><strong>Components &amp; Flow:</strong></p>
+<p>User → API Server → Application Logic → Database (Books, Users, Transactions)</p>
+<p><strong>Explanation:</strong></p>
+<ul>
+<li class=""><strong>API Server:</strong> Receives requests (search books, borrow, return)</li>
+<li class=""><strong>Application Logic:</strong> Handles validation, business rules</li>
+<li class=""><strong>Database:</strong> Stores books, users, and transaction history</li>
+<li class=""><strong>Caching (optional):</strong> Frequently searched books can be cached for faster access</li>
+</ul>
+<p><strong>Tips:</strong></p>
+<ul>
+<li class="">Focus on <strong>CRUD operations</strong></li>
+<li class="">Show understanding of <strong>book availability check</strong></li>
+<li class="">Mention <strong>basic scaling ideas</strong> like caching popular books</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="2️⃣-simple-food-ordering-system">2️⃣ Simple Food Ordering System<a href="#2️⃣-simple-food-ordering-system" class="hash-link" aria-label="Direct link to 2️⃣ Simple Food Ordering System" title="Direct link to 2️⃣ Simple Food Ordering System" translate="no">​</a></h2>
+<p><strong>Scenario:</strong> Customers browse menu, place orders, track delivery.</p>
+<p><strong>High-Level Flow:</strong></p>
+<p>Customer → Web/App → API → Order Service → Restaurant DB → Notification Service → Delivery Tracking</p>
+<p><strong>Explanation:</strong></p>
+<ul>
+<li class=""><strong>Order Service:</strong> Processes orders and updates DB</li>
+<li class=""><strong>Notification Service:</strong> Sends order confirmations</li>
+<li class=""><strong>Delivery Tracking:</strong> Updates order status in real-time</li>
+<li class=""><strong>Database:</strong> Stores menu, orders, users, and delivery info</li>
+</ul>
+<p><strong>Tips:</strong></p>
+<ul>
+<li class="">Explain <strong>order flow from request to delivery</strong></li>
+<li class="">Mention <strong>basic scalability</strong> (e.g., caching menu, multiple order servers)</li>
+<li class="">Highlight <strong>availability</strong> (system should handle multiple simultaneous orders)</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3️⃣-url-shortener">3️⃣ URL Shortener<a href="#3️⃣-url-shortener" class="hash-link" aria-label="Direct link to 3️⃣ URL Shortener" title="Direct link to 3️⃣ URL Shortener" translate="no">​</a></h2>
+<p><strong>Scenario:</strong> Shorten long URLs and redirect users.</p>
+<p><strong>Components:</strong></p>
+<p>User → API → Short URL Service → Database (URL mappings) → Redirect</p>
+<p><strong>Explanation:</strong></p>
+<ul>
+<li class=""><strong>Short URL Service:</strong> Generates unique short codes</li>
+<li class=""><strong>Database:</strong> Stores mappings from short → long URLs</li>
+<li class=""><strong>Redirect Service:</strong> Resolves short URLs to original URLs</li>
+</ul>
+<p><strong>Tips:</strong></p>
+<ul>
+<li class="">Discuss <strong>unique key generation</strong> (hashing or base62 encoding)</li>
+<li class="">Mention <strong>basic reliability</strong> (replication to avoid data loss)</li>
+<li class="">Optional: caching popular URLs for faster redirect</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="4️⃣-simple-chat-application">4️⃣ Simple Chat Application<a href="#4️⃣-simple-chat-application" class="hash-link" aria-label="Direct link to 4️⃣ Simple Chat Application" title="Direct link to 4️⃣ Simple Chat Application" translate="no">​</a></h2>
+<p><strong>Scenario:</strong> Real-time chat between users with message history.</p>
+<p><strong>High-Level Flow:</strong></p>
+<p>User → Web/App → API Server → Chat Service → Database (Messages) → Real-time Service (WebSocket)</p>
+<p><strong>Explanation:</strong></p>
+<ul>
+<li class=""><strong>Chat Service:</strong> Handles storing and fetching messages</li>
+<li class=""><strong>Database:</strong> Stores message history and metadata</li>
+<li class=""><strong>Real-time Service:</strong> Pushes messages instantly via WebSocket or polling</li>
+<li class=""><strong>Caching (optional):</strong> Recent messages cached for faster retrieval</li>
+</ul>
+<p><strong>Tips:</strong></p>
+<ul>
+<li class="">Show understanding of <strong>message flow &amp; real-time updates</strong></li>
+<li class="">Mention <strong>reliability</strong> (ensure messages aren’t lost)</li>
+<li class="">Highlight <strong>simple scalability</strong> (multiple chat servers for high load)</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-quick-tips-for-service-based-system-design">✅ Quick Tips for Service-Based System Design<a href="#-quick-tips-for-service-based-system-design" class="hash-link" aria-label="Direct link to ✅ Quick Tips for Service-Based System Design" title="Direct link to ✅ Quick Tips for Service-Based System Design" translate="no">​</a></h2>
+<ul>
+<li class="">Keep <strong>diagrams simple</strong>: Users → API → Server → DB</li>
+<li class="">Focus on <strong>your past projects</strong>: be ready to explain flow, API, and DB design</li>
+<li class="">Use <strong>system design terms</strong> naturally in explanations</li>
+<li class="">Highlight <strong>basic scalability ideas</strong> if asked</li>
+<li class="">No need for advanced distributed systems knowledge for freshers</li>
+</ul>
+<blockquote>
+<p>🎯 Goal: Demonstrate <strong>clear understanding of system flow, components, and basic design principles</strong>. No need for deep distributed system concepts.</p>
+</blockquote>
+<blockquote>
+<p>🔹 Service-based companies often expect <strong>clarity and practicality</strong> rather than advanced algorithms.</p>
+</blockquote>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-references--further-reading">📚 References &amp; Further Reading<a href="#-references--further-reading" class="hash-link" aria-label="Direct link to 📚 References &amp; Further Reading" title="Direct link to 📚 References &amp; Further Reading" translate="no">​</a></h2>
+<blockquote>
+<p>Curated resources to strengthen your system design knowledge, even for service-based interviews.</p>
+</blockquote>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-free--essential-system-design-references">📚 Free &amp; Essential System Design References<a href="#-free--essential-system-design-references" class="hash-link" aria-label="Direct link to 📚 Free &amp; Essential System Design References" title="Direct link to 📚 Free &amp; Essential System Design References" translate="no">​</a></h2>
+<blockquote>
+<p>These resources are <strong>enough</strong> to prepare system design for <strong>service-based company interviews</strong>.</p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-articles--reading-must-read">🌐 Articles &amp; Reading (Must-Read)<a href="#-articles--reading-must-read" class="hash-link" aria-label="Direct link to 🌐 Articles &amp; Reading (Must-Read)" title="Direct link to 🌐 Articles &amp; Reading (Must-Read)" translate="no">​</a></h3>
+<ul>
+<li class="">
+<p><strong>System Design Roadmap</strong><br>
+<a href="https://roadmap.sh/system-design" target="_blank" rel="noopener noreferrer" class="">https://roadmap.sh/system-design</a><br>
+<!-- -->👉 Structured path showing <em>what to learn and in what order</em>.</p>
+</li>
+<li class="">
+<p><strong>Awesome System Design Resources (GitHub)</strong><br>
+<a href="https://github.com/ashishps1/awesome-system-design-resources" target="_blank" rel="noopener noreferrer" class="">https://github.com/ashishps1/awesome-system-design-resources</a><br>
+<!-- -->👉 One place for diagrams, explanations, and examples.</p>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-video-learning-free--clear">🎥 Video Learning (Free &amp; Clear)<a href="#-video-learning-free--clear" class="hash-link" aria-label="Direct link to 🎥 Video Learning (Free &amp; Clear)" title="Direct link to 🎥 Video Learning (Free &amp; Clear)" translate="no">​</a></h3>
+<ul>
+<li class="">
+<p><a href="https://www.youtube.com/@ByteByteGo/videos" target="_blank" rel="noopener noreferrer" class="">ByteByteGo-System design</a><br>
+<!-- -->👉 Visual explanations of scalability, databases, caching, and APIs.</p>
+</li>
+<li class="">
+<p><a href="https://www.youtube.com/watch?v=SqcXvc3ZmRU&amp;list=PLMCXHnjXnTnvo6alSjVkgxV-VH6EPyvoX" target="_blank" rel="noopener noreferrer" class="">System Design - Gaurav Sen</a> - Simple breakdowns of real interview system design problems.</p>
+</li>
+</ul>
+<hr>
+<blockquote>
+<p>⭐ <strong>Interview Tip</strong><br>
+<!-- -->If you understand <strong>APIs, Databases, Caching, Load Balancing, Scalability, and Reliability</strong> from these resources,<br>
+<!-- -->you are <strong>more than ready</strong> for service-based system design rounds.</p>
+</blockquote></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/coding-questions/docs/Coding Questions/Service Companies/DSA-question"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">DSA Questions</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#-key-terms" class="table-of-contents__link toc-highlight">🔑 Key Terms</a></li><li><a href="#-topics-to-cover" class="table-of-contents__link toc-highlight">📚 Topics to Cover</a><ul><li><a href="#1-database-basics" class="table-of-contents__link toc-highlight">1. Database Basics</a></li><li><a href="#2-api--endpoints" class="table-of-contents__link toc-highlight">2. API &amp; Endpoints</a></li><li><a href="#3-caching" class="table-of-contents__link toc-highlight">3. Caching</a></li><li><a href="#4-load-balancing" class="table-of-contents__link toc-highlight">4. Load Balancing</a></li><li><a href="#5-high-level-architecture" class="table-of-contents__link toc-highlight">5. High-Level Architecture</a></li><li><a href="#6-reliability--availability" class="table-of-contents__link toc-highlight">6. Reliability &amp; Availability</a></li><li><a href="#7-scalability--performance" class="table-of-contents__link toc-highlight">7. Scalability &amp; Performance</a></li><li><a href="#8-concurrency--queues" class="table-of-contents__link toc-highlight">8. Concurrency &amp; Queues</a></li></ul></li><li><a href="#1️⃣-library-management-system" class="table-of-contents__link toc-highlight">1️⃣ Library Management System</a></li><li><a href="#2️⃣-simple-food-ordering-system" class="table-of-contents__link toc-highlight">2️⃣ Simple Food Ordering System</a></li><li><a href="#3️⃣-url-shortener" class="table-of-contents__link toc-highlight">3️⃣ URL Shortener</a></li><li><a href="#4️⃣-simple-chat-application" class="table-of-contents__link toc-highlight">4️⃣ Simple Chat Application</a></li><li><a href="#-quick-tips-for-service-based-system-design" class="table-of-contents__link toc-highlight">✅ Quick Tips for Service-Based System Design</a></li><li><a href="#-references--further-reading" class="table-of-contents__link toc-highlight">📚 References &amp; Further Reading</a></li><li><a href="#-free--essential-system-design-references" class="table-of-contents__link toc-highlight">📚 Free &amp; Essential System Design References</a><ul><li><a href="#-articles--reading-must-read" class="table-of-contents__link toc-highlight">🌐 Articles &amp; Reading (Must-Read)</a></li><li><a href="#-video-learning-free--clear" class="table-of-contents__link toc-highlight">🎥 Video Learning (Free &amp; Clear)</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/coding-questions/docs/intro">Yuva Builds</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.linkedin.com/in/yuvarakshana-sukumar-4193b7206/" target="_blank" rel="noopener noreferrer" class="footer__link-item">LinkedIn<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.youtube.com/@yuva_views06" target="_blank" rel="noopener noreferrer" class="footer__link-item">Youtube<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Yuva Builds, Inc. Built with Passion.</div></div></div></footer></div>
+</body>
+</html>
