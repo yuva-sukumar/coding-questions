@@ -27,6 +27,16 @@ export default function Home() {
             <span>Common coding questions & topics</span>
           </Link>
 
+          <Link
+            className={styles.card}
+            to="/docs/Live Coding Interview/overview"
+          >
+            🚀 Live Coding Interviews — Complete Guide
+            <span>
+              Understand what actually happens during coding interviews
+            </span>
+          </Link>
+
           <Link className={styles.card} to="">
             🧑‍💻 Product Companies
             <span>Tier 1 & Tier 2 coding preparation</span>
